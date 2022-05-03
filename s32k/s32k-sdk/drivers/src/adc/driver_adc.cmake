@@ -1,9 +1,9 @@
-#Description: ERM Driver; user_visible: True
+#Description: ACMP Driver; user_visible: True
 include_guard(GLOBAL)
-message("driver_erm component is included.")
+message("driver_adc component is included.")
 
 target_sources(${S32K_SDK_PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/erm_driver.c
+    ${CMAKE_CURRENT_LIST_DIR}/adc_driver.c
 )
 
 target_include_directories(${S32K_SDK_PROJECT_NAME} PUBLIC

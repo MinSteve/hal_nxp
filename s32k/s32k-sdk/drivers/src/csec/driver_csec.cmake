@@ -1,12 +1,12 @@
-#Description: ACMP Driver; user_visible: True
+#Description: CSEC Driver; user_visible: True
 include_guard(GLOBAL)
 message("driver_csec component is included.")
 
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/fsl_acmp.c
+target_sources(${S32K_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/csec_driver.c
 )
 
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+target_include_directories(${S32K_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/.
 )
 
