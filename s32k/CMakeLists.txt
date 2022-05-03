@@ -21,7 +21,7 @@ zephyr_include_directories(s32k-sdk/devices/${MCUX_DEVICE})
 # instantiated with/without a hardware FIFO, and the size of that FIFO
 # may be different for each instance in a given SoC. See
 # fsl_device_registers.h and ${MCUX_DEVICE}_features.h
-zephyr_compile_definitions(${MCUX_CPU})
+zephyr_compile_definitions(${S32K_CPU})
 
 # Build mcux device-specific objects. Although it is not normal
 # practice, drilling down like this avoids the need for repetitive
