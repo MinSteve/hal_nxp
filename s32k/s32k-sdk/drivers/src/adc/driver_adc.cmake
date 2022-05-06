@@ -11,4 +11,4 @@ target_include_directories(${S32K_SDK_PROJECT_NAME} PUBLIC
 )
 
 
-include(driver_common)
+include(driver_inc)

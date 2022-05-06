@@ -4,8 +4,8 @@ set(S32K_SDK_PROJECT_NAME ${ZEPHYR_CURRENT_LIBRARY})
 string(TOUPPER ${CONFIG_SOC} S32K_DEVICE)
 
 if("${S32K_DEVICE}" STREQUAL "S32K144")
-  set(MCUX_CPU CPU_${CONFIG_SOC_PART_NUMBER})
-  set(MCUX_DEVICE S32K144)
+  set(S32K_CPU CPU_${CONFIG_SOC_PART_NUMBER})
+  set(S32K_DEVICE S32K144)
 endif()
 
 zephyr_include_directories(s32k-sdk/devices/${MCUX_DEVICE})
@@ -21,7 +21,7 @@ zephyr_include_directories(s32k-sdk/devices/${MCUX_DEVICE})
 # instantiated with/without a hardware FIFO, and the size of that FIFO
 # may be different for each instance in a given SoC. See
 # fsl_device_registers.h and ${MCUX_DEVICE}_features.h
-zephyr_compile_definitions(${MCUX_CPU})
+zephyr_compile_definitions(${S32K_CPU})
 
 # Build mcux device-specific objects. Although it is not normal
 # practice, drilling down like this avoids the need for repetitive
